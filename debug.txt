@@ -1,0 +1,83 @@
+iezhiben2@xiezhiben2-System-Product-Name:/home/nvq/MockingBird$ python3.8 pre.py ../aidatatang_200zh/
+Traceback (most recent call last):
+  File "pre.py", line 1, in <module>
+    from synthesizer.preprocess import create_embeddings
+  File "/home/nvq/MockingBird/synthesizer/preprocess.py", line 8, in <module>
+    from encoder import inference as encoder
+  File "/home/nvq/MockingBird/encoder/inference.py", line 2, in <module>
+    from encoder.model import SpeakerEncoder
+  File "/home/nvq/MockingBird/encoder/model.py", line 3, in <module>
+    from scipy.interpolate import interp1d
+  File "/home/xiezhiben2/.local/lib/python3.8/site-packages/scipy/interpolate/__init__.py", line 166, in <module>
+    from .interpolate import *
+  File "/home/xiezhiben2/.local/lib/python3.8/site-packages/scipy/interpolate/interpolate.py", line 11, in <module>
+    import scipy.special as spec
+  File "/home/xiezhiben2/.local/lib/python3.8/site-packages/scipy/special/__init__.py", line 643, in <module>
+    from . import _ufuncs
+  File "_ufuncs.pyx", line 1, in init scipy.special._ufuncs
+ValueError: numpy.ndarray size changed, may indicate binary incompatibility. Expected 96 from C header, got 88 from PyObjec
+
+pip install --upgrade numpy
+
+
+pip3 install --pre torch torchvision -f https://download.pytorch.org/whl/nightly/rocm4.3.1/torch_nightly.html
+
+
+
+
+
+
+
+
+
+
+
+ImportError: /home/xiezhiben2/.local/lib/python3.8/site-packages/scipy/special/cython_special.cpython-38-x86_64-linux-gnu.so: undefined symbol: _gfortran_stop_numeric
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+xiezhiben2@xiezhiben2-System-Product-Name:/home/nvq/MockingBird$ sudo python3.8 pre.py ../aidatatang_200zh/
+Traceback (most recent call last):
+  File "pre.py", line 1, in <module>
+    from synthesizer.preprocess import create_embeddings
+  File "/home/nvq/MockingBird/synthesizer/preprocess.py", line 8, in <module>
+    from encoder import inference as encoder
+  File "/home/nvq/MockingBird/encoder/inference.py", line 2, in <module>
+    from encoder.model import SpeakerEncoder
+  File "/home/nvq/MockingBird/encoder/model.py", line 4, in <module>
+    from sklearn.metrics import roc_curve
+  File "/home/xiezhiben2/.local/lib/python3.8/site-packages/sklearn/__init__.py", line 82, in <module>
+    from .base import clone
+  File "/home/xiezhiben2/.local/lib/python3.8/site-packages/sklearn/base.py", line 17, in <module>
+    from .utils import _IS_32BIT
+  File "/home/xiezhiben2/.local/lib/python3.8/site-packages/sklearn/utils/__init__.py", line 28, in <module>
+    from .fixes import np_version, parse_version
+  File "/home/xiezhiben2/.local/lib/python3.8/site-packages/sklearn/utils/fixes.py", line 20, in <module>
+    import scipy.stats
+  File "/home/xiezhiben2/.local/lib/python3.8/site-packages/scipy/stats/__init__.py", line 441, in <module>
+    from .stats import *
+  File "/home/xiezhiben2/.local/lib/python3.8/site-packages/scipy/stats/stats.py", line 43, in <module>
+    from . import distributions
+  File "/home/xiezhiben2/.local/lib/python3.8/site-packages/scipy/stats/distributions.py", line 10, in <module>
+    from . import _continuous_distns
+  File "/home/xiezhiben2/.local/lib/python3.8/site-packages/scipy/stats/_continuous_distns.py", line 22, in <module>
+    from . import _stats
+  File "_stats.pyx", line 1, in init scipy.stats._stats
+ImportError: /home/xiezhiben2/.local/lib/python3.8/site-packages/scipy/special/cython_special.cpython-38-x86_64-linux-gnu.so: undefined symbol: _gfortran_stop_numeric
+
